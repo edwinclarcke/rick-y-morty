@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Iceland&display=swap');
+*{
+    box-sizing: border-box;
+    font-family: 'Iceland';
+    
+}
+
+.background{
+
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width:100vw;
+    max-width: 100%;
+    background-color: rgb(49, 46, 73);
+
+
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(32, 32, 32);
+    height: 60px;
+    border-bottom: 1px solid rgb(78, 78, 78);
+
+}
+
+.navbar-input{
+
+    flex-grow: 1;
+    height: 30px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    max-width: 600px;
+    font-size: 18px;
+    padding-left: 10px;
+    margin:0 10px;
+    font-weight: bold;
+    box-shadow: snow;
+
+    
+
+}
+
+.character-list-background{
+    height: 100%;
+    width: 100%;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+    justify-content: center;
+    gap: 100px;
+    padding: 80px 20px;
+    user-select: none;
+}
+
+
+.img-div{
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+
+img{
+    height: 100%;
+    width: 100%;
+    transition: 0.8s;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+
+img:hover{
+
+    transform: scale(1.15);
+    cursor: pointer;
+
+}
+
+.card-background{
+    position: relative;
+}
+
+.card-background::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(rgb(228, 44, 228),blue);
+    filter: blur(5px);
+
+
+}
+
+
+.card{
+    position:relative;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(32, 32, 32);
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+
+.attributes-div{
+    padding: 15px 15px 15px 20px;
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+    font-size: 20px;
+}
+
+.attribute{
+    word-wrap: break-word;
+    display: flex;
+    align-items: center;
+    gap:10px;
+}
+
+
+.icon{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.dead{
+    background-color: rgb(255, 0, 0);
+}
+
+.alive{
+
+    background-color: rgb(0, 255, 0);
+}
+.unknown{
+    background-color: rgb(145, 145, 145);
+}
+
+.change-page-div{
+    height:150px;
+    background-color: rgb(32, 32, 32);
+    user-select: none;
+}
+
+.change-page-option-container{
+    height: 100%;
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.change-page-option{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 100px;
+    font-size: 25px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(124, 124, 124);
+    
+}
+
+.change-page-option-selected{
+    display:flex;
+    background-color: rgb(138, 138, 138);
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(124, 124, 124);
+}
+
+.change-page-option-num{
+    display:flex;
+    background-color: rgb(255, 255, 255);
+    height: 40px;
+    width: 40px;
+    font-size: 25px;
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(124, 124, 124);
+}
+
+.change-page-option:hover{
+    background-color: rgb(209, 209, 209);
+    border: 3px solid rgb(124, 124, 124);
+    cursor: pointer;
+}
+
+.change-page-option:active{
+    background-color: rgb(138, 138, 138);
+    border: 2px solid rgb(124, 124, 124);
+    cursor: pointer;
+}
+
+.change-page-option:disabled{
+    background-color: rgb(138, 138, 138);
+    border: 2px solid rgb(124, 124, 124);
+    color:black;
+    cursor:default;
+}
+
+
+.change-page-option-num:hover{
+    background-color: rgb(209, 209, 209);
+    border: 3px solid rgb(124, 124, 124);
+    cursor: pointer;
+}
+
+.change-page-option-num:active{
+    background-color: rgb(145, 145, 145);
+    border: 3px solid rgb(124, 124, 124);
+    cursor: pointer;
+}
+
+

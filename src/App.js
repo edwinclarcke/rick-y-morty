@@ -1,25 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import CharacterList from "./components/CharacterList" 
+import './styles/Global.css'
+import Normalize from 'react-normalize'
+import {Route, BrowserRouter, Switch} from 'react-router-dom'
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+    
+    <Normalize/>
+      <BrowserRouter>
+
+        <Switch>
+          <div className='background'>
+          <Route exact path='/' component={CharacterList}/>
+          </div>
+        </Switch>
+
+      </BrowserRouter>
+    </>
+);
 }
 
 export default App;
